@@ -331,10 +331,10 @@
                             <i data-lucide="message-circle" style="width:15px;height:15px;flex-shrink:0;margin-top:2px;"></i>
                             <span>WhatsApp</span>
                         </a>
-                        <div style="display:flex;align-items:flex-start;gap:var(--space-2);color:oklch(from var(--color-text-inverse) l c h / 0.5);font-size:var(--text-sm);">
+                        <a href="https://maps.app.goo.gl/Nhb4qf1c4UjyAedw9" target="_blank" rel="noopener noreferrer" class="footer__link" style="display:flex;align-items:flex-start;gap:var(--space-2);">
                             <i data-lucide="map-pin" style="width:15px;height:15px;flex-shrink:0;margin-top:2px;"></i>
-                            <span>Jl. Raya Contoh No. 123<br>Bekasi, Jawa Barat</span>
-                        </div>
+                            <span>Depan pabrik konveksi, Jl. Raya Mangun Jaya No.197<br>Kec. Tambun Sel., Kabupaten Bekasi, Jawa Barat</span>
+                        </a>
                     </div>
                 </div>
             </div>
