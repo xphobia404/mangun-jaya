@@ -58,7 +58,14 @@
 <!-- STORY -->
 <section class="section">
     <div class="container">
-        <div class="grid-2" style="align-items:start;gap:var(--space-16);">
+        <div class="grid-2" style="align-items:center;gap:var(--space-16);">
+
+            {{-- KIRI: foto toko --}}
+            <div class="reveal" style="border-radius:var(--radius-xl);overflow:hidden;aspect-ratio:1;background:var(--color-surface-offset);">
+                <img src="{{ asset('image/store.png') }}" alt="Toko Mangun Jaya Plafon" width="700" height="700" loading="lazy" style="width:100%;height:100%;object-fit:cover;" onerror="this.src='https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=700&q=80'">
+            </div>
+
+            {{-- KANAN: teks --}}
             <div class="reveal">
                 <div class="section-header">
                     <div class="section-header__eyebrow">Kisah Kami</div>
@@ -84,7 +91,7 @@
 
                 <div class="ceo-card">
                     <div class="ceo-card__avatar">
-                        <img src="{{ asset('image/ceo.jpg') }}" alt="Andre Saputra, S.T. - CEO & Co-founder Mangun Jaya Plafon" width="56" height="56" loading="lazy" onerror="this.style.display='none';this.parentElement.innerHTML='<svg viewBox=\'0 0 56 56\' fill=\'none\' xmlns=\'http://www.w3.org/2000/svg\'><rect width=\'56\' height=\'56\' fill=\'var(--color-surface-offset)\'/><circle cx=\'28\' cy=\'22\' r=\'10\' fill=\'var(--color-text-faint)\'/><ellipse cx=\'28\' cy=\'44\' rx=\'16\' ry=\'10\' fill=\'var(--color-text-faint)\'/></svg>';">
+                        <img src="{{ asset('image/ceo.jpg') }}" alt="Andre Saputra, S.T. - CEO & Co-founder Mangun Jaya Plafon" width="56" height="56" loading="lazy" onerror="this.onerror=null;this.src='https://i.pravatar.cc/56?img=11';">
                     </div>
                     <div>
                         <div class="ceo-card__name">Andre Saputra, S.T.</div>
@@ -97,9 +104,6 @@
                 </div>
             </div>
 
-            <div class="reveal" style="border-radius:var(--radius-xl);overflow:hidden;aspect-ratio:1;background:var(--color-surface-offset);">
-                <img src="{{ asset('image/store.png') }}" alt="Toko Mangun Jaya Plafon" width="700" height="700" loading="lazy" style="width:100%;height:100%;object-fit:cover;" onerror="this.src='https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=700&q=80'">
-            </div>
         </div>
     </div>
 </section>
