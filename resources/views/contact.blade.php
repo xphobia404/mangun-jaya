@@ -1,6 +1,6 @@
 @extends('layouts.app')
 @section('title', 'Kontak')
-@section('meta_desc', 'Hubungi Mangun Jaya untuk konsultasi gratis, survei, dan penawaran harga plafon terbaik.')
+@section('meta_desc', 'Hubungi Mangun Jaya untuk konsultasi gratis, survei, dan penawaran harga plafon terbaik. 1 Pusat + 4 Cabang di Bekasi.')
 
 @section('content')
 @push('styles')
@@ -23,9 +23,31 @@
     .form-error { font-size: var(--text-xs); color: #d32f2f; margin-top: var(--space-1); }
     .alert-success { background: #e8f5e9; border: 1px solid #a5d6a7; border-radius: var(--radius-md); padding: var(--space-4); font-size: var(--text-sm); color: #2e7d32; display: flex; align-items: center; gap: var(--space-2); margin-bottom: var(--space-6); }
     [data-theme="dark"] .alert-success { background: oklch(0.25 0.06 145 / 0.3); border-color: oklch(0.5 0.1 145 / 0.4); color: var(--color-success, #7db84a); }
-    .map-embed { border-radius: var(--radius-xl); overflow: hidden; border: 1px solid var(--color-border); margin-top: var(--space-10); aspect-ratio: 16/6; background: var(--color-surface-offset); }
-    .map-embed iframe { width: 100%; height: 100%; border: none; }
-    @media (max-width: 768px) { .contact-grid { grid-template-columns: 1fr; } }
+
+    /* LOCATION TABS */
+    .locations-section { margin-top: var(--space-16); }
+    .locations-title { font-family: var(--font-display); font-size: var(--text-xl); font-weight: 800; margin-bottom: var(--space-2); }
+    .locations-desc { font-size: var(--text-sm); color: var(--color-text-muted); margin-bottom: var(--space-8); }
+    .loc-tabs { display: flex; gap: var(--space-2); flex-wrap: wrap; margin-bottom: var(--space-6); }
+    .loc-tab { padding: var(--space-2) var(--space-4); border-radius: var(--radius-full); font-size: var(--text-sm); font-weight: 600; border: 1.5px solid var(--color-border); color: var(--color-text-muted); background: transparent; cursor: pointer; transition: all var(--transition); white-space: nowrap; }
+    .loc-tab:hover { border-color: var(--color-primary); color: var(--color-primary); background: var(--color-primary-light); }
+    .loc-tab.active { background: var(--color-primary); border-color: var(--color-primary); color: #fff; }
+    .loc-panel { display: none; }
+    .loc-panel.active { display: block; }
+    .loc-card { display: grid; grid-template-columns: 1fr 1.8fr; gap: var(--space-8); align-items: start; background: var(--color-surface-2); border: 1px solid oklch(from var(--color-text) l c h / 0.07); border-radius: var(--radius-xl); padding: var(--space-8); box-shadow: var(--shadow-sm); }
+    .loc-badge { display: inline-flex; align-items: center; gap: var(--space-1); padding: 0.25rem 0.75rem; border-radius: var(--radius-full); font-size: var(--text-xs); font-weight: 700; text-transform: uppercase; letter-spacing: 0.06em; margin-bottom: var(--space-3); }
+    .loc-badge--pusat { background: var(--color-primary); color: #fff; }
+    .loc-badge--cabang { background: var(--color-primary-light); color: var(--color-primary); }
+    .loc-name { font-family: var(--font-display); font-size: var(--text-lg); font-weight: 700; margin-bottom: var(--space-2); }
+    .loc-address { font-size: var(--text-sm); color: var(--color-text-muted); line-height: 1.75; margin-bottom: var(--space-5); }
+    .loc-actions { display: flex; flex-direction: column; gap: var(--space-3); }
+    .loc-map { border-radius: var(--radius-lg); overflow: hidden; border: 1px solid var(--color-border); aspect-ratio: 4/3; background: var(--color-surface-offset); }
+    .loc-map iframe { width: 100%; height: 100%; border: none; display: block; }
+    @media (max-width: 768px) {
+        .contact-grid { grid-template-columns: 1fr; }
+        .loc-card { grid-template-columns: 1fr; }
+        .loc-map { aspect-ratio: 16/9; }
+    }
 </style>
 @endpush
 
@@ -33,7 +55,7 @@
     <div class="container">
         <div class="page-hero__eyebrow">Kontak</div>
         <h1 class="page-hero__title">Hubungi Kami<br>Kapan Saja</h1>
-        <p class="page-hero__desc">Dapatkan konsultasi gratis dan survei lokasi tanpa biaya. Tim kami siap membantu Anda.</p>
+        <p class="page-hero__desc">Dapatkan konsultasi gratis dan survei lokasi tanpa biaya. 1 Pusat + 4 Cabang siap melayani Anda di Bekasi.</p>
     </div>
 </div>
 
@@ -50,8 +72,15 @@
                     <div class="contact-info__item">
                         <div class="contact-info__icon"><i data-lucide="map-pin" style="width:20px;height:20px;"></i></div>
                         <div>
-                            <div class="contact-info__label">Alamat</div>
-                            <div class="contact-info__value">Jl. Raya Contoh No. 123<br>Bekasi, Jawa Barat 17147</div>
+                            <div class="contact-info__label">Kantor Pusat</div>
+                            <div class="contact-info__value">Jl. Raya Mangun Jaya No.197<br>Tambun Selatan, Kab. Bekasi 17510</div>
+                        </div>
+                    </div>
+                    <div class="contact-info__item">
+                        <div class="contact-info__icon"><i data-lucide="building-2" style="width:20px;height:20px;"></i></div>
+                        <div>
+                            <div class="contact-info__label">Jaringan</div>
+                            <div class="contact-info__value">1 Pusat + 4 Cabang<br>di wilayah Bekasi Raya</div>
                         </div>
                     </div>
                     <div class="contact-info__item">
@@ -134,10 +163,190 @@
             </div>
         </div>
 
-        <!-- Map -->
-        <div class="map-embed reveal">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d126748.28130878694!2d106.87820124999999!3d-6.238569999999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e698d37d718e4d5%3A0x5030bfecaed42f7e!2sBekasi%2C%20Jawa%20Barat!5e0!3m2!1sid!2sid!4v1234567890" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Lokasi Mangun Jaya di Bekasi"></iframe>
+        <!-- LOCATIONS SECTION -->
+        <div class="locations-section reveal">
+            <h2 class="locations-title">Lokasi Kami</h2>
+            <p class="locations-desc">1 Kantor Pusat + 4 Cabang tersebar di Bekasi Raya — pilih lokasi terdekat dari Anda.</p>
+
+            <!-- Tab Buttons -->
+            <div class="loc-tabs" role="tablist" aria-label="Pilih lokasi">
+                <button class="loc-tab active" role="tab" aria-selected="true" aria-controls="panel-pusat" data-panel="pusat">
+                    ⭐ Pusat
+                </button>
+                <button class="loc-tab" role="tab" aria-selected="false" aria-controls="panel-cab1" data-panel="cab1">
+                    Cabang 1 – Setu
+                </button>
+                <button class="loc-tab" role="tab" aria-selected="false" aria-controls="panel-cab2" data-panel="cab2">
+                    Cabang 2 – Rw. Kalong
+                </button>
+                <button class="loc-tab" role="tab" aria-selected="false" aria-controls="panel-cab3" data-panel="cab3">
+                    Cabang 3 – Rw. Kalong 2
+                </button>
+                <button class="loc-tab" role="tab" aria-selected="false" aria-controls="panel-cab4" data-panel="cab4">
+                    Cabang 4 – Bekasi Timur
+                </button>
+            </div>
+
+            <!-- Pusat -->
+            <div id="panel-pusat" class="loc-panel active" role="tabpanel">
+                <div class="loc-card">
+                    <div>
+                        <span class="loc-badge loc-badge--pusat"><i data-lucide="star" style="width:12px;height:12px;"></i> Kantor Pusat</span>
+                        <div class="loc-name">Mangun Jaya Plafon Pusat</div>
+                        <p class="loc-address">Depan Pabrik Konveksi,<br>Jl. Raya Mangun Jaya No.197, RT.004/RW.002<br>Kec. Tambun Selatan, Kab. Bekasi<br>Jawa Barat 17510</p>
+                        <div class="loc-actions">
+                            <a href="https://maps.google.com/?q=Jl.+Raya+Mangun+Jaya+No.197+Tambun+Selatan+Bekasi" target="_blank" rel="noopener noreferrer" class="btn btn--primary" style="justify-content:center;">
+                                <i data-lucide="navigation" style="width:16px;height:16px;"></i>
+                                Buka di Google Maps
+                            </a>
+                            <a href="https://wa.me/6282310719177?text=Halo%2C%20saya%20ingin%20ke%20kantor%20pusat%20Mangun%20Jaya" target="_blank" rel="noopener noreferrer" class="btn btn--outline" style="justify-content:center;">
+                                <i data-lucide="message-circle" style="width:16px;height:16px;"></i>
+                                Tanya via WhatsApp
+                            </a>
+                        </div>
+                    </div>
+                    <div class="loc-map">
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.0!2d107.0050!3d-6.2350!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNsKwMTQnMDYuMCJTIDEwN8KwMDAnMTguMCJF!5e0!3m2!1sid!2sid!4v1234567890!5m2!1sid!2sid&q=Jl.+Raya+Mangun+Jaya+No.197,+Tambun+Selatan,+Bekasi"
+                            allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+                            title="Peta Mangun Jaya Plafon Pusat - Tambun Selatan Bekasi">
+                        </iframe>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Cabang 1 -->
+            <div id="panel-cab1" class="loc-panel" role="tabpanel">
+                <div class="loc-card">
+                    <div>
+                        <span class="loc-badge loc-badge--cabang">Cabang 1</span>
+                        <div class="loc-name">Cabang Setu – Cikarang Barat</div>
+                        <p class="loc-address">Jl. Raya Setu No.33<br>Mekarwangi, Kec. Cikarang Barat<br>Kabupaten Bekasi 17530</p>
+                        <div class="loc-actions">
+                            <a href="https://maps.google.com/?q=Jl.+Raya+Setu+No.33+Mekarwangi+Cikarang+Barat+Bekasi" target="_blank" rel="noopener noreferrer" class="btn btn--primary" style="justify-content:center;">
+                                <i data-lucide="navigation" style="width:16px;height:16px;"></i>
+                                Buka di Google Maps
+                            </a>
+                            <a href="https://wa.me/6282310719177?text=Halo%2C%20saya%20ingin%20ke%20cabang%20Setu%20Mangun%20Jaya" target="_blank" rel="noopener noreferrer" class="btn btn--outline" style="justify-content:center;">
+                                <i data-lucide="message-circle" style="width:16px;height:16px;"></i>
+                                Tanya via WhatsApp
+                            </a>
+                        </div>
+                    </div>
+                    <div class="loc-map">
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.0!2d107.1500!3d-6.3100!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNsKwMTgnMzYuMCJTIDEwN8KwMDknMDAuMCJF!5e0!3m2!1sid!2sid!4v1234567891!5m2!1sid!2sid&q=Jl.+Raya+Setu+No.33,+Mekarwangi,+Cikarang+Barat,+Bekasi"
+                            allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+                            title="Peta Mangun Jaya Cabang Setu - Cikarang Barat">
+                        </iframe>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Cabang 2 -->
+            <div id="panel-cab2" class="loc-panel" role="tabpanel">
+                <div class="loc-card">
+                    <div>
+                        <span class="loc-badge loc-badge--cabang">Cabang 2</span>
+                        <div class="loc-name">Cabang Rawas Kalong – Tambun Utara</div>
+                        <p class="loc-address">Q29V+F6V,<br>Jl. Raya Rw. Kalong No.131<br>Karangsatria, Kec. Tambun Utara<br>Kabupaten Bekasi, Jawa Barat 17510</p>
+                        <div class="loc-actions">
+                            <a href="https://maps.google.com/?q=Q29V%2BF6V+Jl.+Raya+Rw.+Kalong+No.131+Karangsatria+Tambun+Utara+Bekasi" target="_blank" rel="noopener noreferrer" class="btn btn--primary" style="justify-content:center;">
+                                <i data-lucide="navigation" style="width:16px;height:16px;"></i>
+                                Buka di Google Maps
+                            </a>
+                            <a href="https://wa.me/6282310719177?text=Halo%2C%20saya%20ingin%20ke%20cabang%20Rw.%20Kalong%20131%20Mangun%20Jaya" target="_blank" rel="noopener noreferrer" class="btn btn--outline" style="justify-content:center;">
+                                <i data-lucide="message-circle" style="width:16px;height:16px;"></i>
+                                Tanya via WhatsApp
+                            </a>
+                        </div>
+                    </div>
+                    <div class="loc-map">
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3965.0!2d107.0200!3d-6.2100!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNsKwMTInMzYuMCJTIDEwN8KwMDEnMTIuMCJF!5e0!3m2!1sid!2sid!4v1234567892!5m2!1sid!2sid&q=Jl.+Raya+Rw.+Kalong+No.131,+Karangsatria,+Tambun+Utara,+Bekasi"
+                            allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+                            title="Peta Mangun Jaya Cabang Rw. Kalong 131 - Tambun Utara">
+                        </iframe>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Cabang 3 -->
+            <div id="panel-cab3" class="loc-panel" role="tabpanel">
+                <div class="loc-card">
+                    <div>
+                        <span class="loc-badge loc-badge--cabang">Cabang 3</span>
+                        <div class="loc-name">Cabang Rw. Kalong – Depan O!Save</div>
+                        <p class="loc-address">Jl. Raya Rw. Kalong Depan O!Save No.125<br>Karangsatria, Kec. Tambun Utara<br>Kabupaten Bekasi, Jawa Barat 17510</p>
+                        <div class="loc-actions">
+                            <a href="https://maps.google.com/?q=Jl.+Raya+Rw.+Kalong+No.125+Karangsatria+Tambun+Utara+Bekasi" target="_blank" rel="noopener noreferrer" class="btn btn--primary" style="justify-content:center;">
+                                <i data-lucide="navigation" style="width:16px;height:16px;"></i>
+                                Buka di Google Maps
+                            </a>
+                            <a href="https://wa.me/6282310719177?text=Halo%2C%20saya%20ingin%20ke%20cabang%20Rw.%20Kalong%20125%20Mangun%20Jaya" target="_blank" rel="noopener noreferrer" class="btn btn--outline" style="justify-content:center;">
+                                <i data-lucide="message-circle" style="width:16px;height:16px;"></i>
+                                Tanya via WhatsApp
+                            </a>
+                        </div>
+                    </div>
+                    <div class="loc-map">
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3965.0!2d107.0190!3d-6.2095!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNsKwMTInMzQuMiJTIDEwN8KwMDEnMDguOCJF!5e0!3m2!1sid!2sid!4v1234567893!5m2!1sid!2sid&q=Jl.+Raya+Rw.+Kalong+No.125,+Karangsatria,+Tambun+Utara,+Bekasi"
+                            allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+                            title="Peta Mangun Jaya Cabang Rw. Kalong 125 - Tambun Utara">
+                        </iframe>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Cabang 4 -->
+            <div id="panel-cab4" class="loc-panel" role="tabpanel">
+                <div class="loc-card">
+                    <div>
+                        <span class="loc-badge loc-badge--cabang">Cabang 4</span>
+                        <div class="loc-name">Cabang Bekasi Timur – Aren Jaya</div>
+                        <p class="loc-address">Samping Bengkel Resmi Suzuki,<br>Jl. Setia Mekar No.130, RT.010/RW.008<br>Aren Jaya, Kec. Bekasi Timur<br>Kota Bekasi, Jawa Barat 17111</p>
+                        <div class="loc-actions">
+                            <a href="https://maps.google.com/?q=Jl.+Setia+Mekar+No.130+Aren+Jaya+Bekasi+Timur+Kota+Bekasi" target="_blank" rel="noopener noreferrer" class="btn btn--primary" style="justify-content:center;">
+                                <i data-lucide="navigation" style="width:16px;height:16px;"></i>
+                                Buka di Google Maps
+                            </a>
+                            <a href="https://wa.me/6282310719177?text=Halo%2C%20saya%20ingin%20ke%20cabang%20Bekasi%20Timur%20Mangun%20Jaya" target="_blank" rel="noopener noreferrer" class="btn btn--outline" style="justify-content:center;">
+                                <i data-lucide="message-circle" style="width:16px;height:16px;"></i>
+                                Tanya via WhatsApp
+                            </a>
+                        </div>
+                    </div>
+                    <div class="loc-map">
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.0!2d107.0200!3d-6.2500!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNsKwMTUnMDAuMCJTIDEwN8KwMDEnMTIuMCJF!5e0!3m2!1sid!2sid!4v1234567894!5m2!1sid!2sid&q=Jl.+Setia+Mekar+No.130,+Aren+Jaya,+Bekasi+Timur,+Kota+Bekasi"
+                            allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+                            title="Peta Mangun Jaya Cabang Bekasi Timur - Aren Jaya">
+                        </iframe>
+                    </div>
+                </div>
+            </div>
         </div>
+
     </div>
 </section>
+
+@push('scripts')
+<script>
+    // Location tab switcher
+    const tabs = document.querySelectorAll('.loc-tab');
+    const panels = document.querySelectorAll('.loc-panel');
+    tabs.forEach(tab => {
+        tab.addEventListener('click', () => {
+            const target = tab.dataset.panel;
+            tabs.forEach(t => { t.classList.remove('active'); t.setAttribute('aria-selected', 'false'); });
+            panels.forEach(p => p.classList.remove('active'));
+            tab.classList.add('active');
+            tab.setAttribute('aria-selected', 'true');
+            document.getElementById('panel-' + target).classList.add('active');
+        });
+    });
+</script>
+@endpush
+
 @endsection
