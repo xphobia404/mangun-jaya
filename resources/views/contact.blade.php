@@ -195,7 +195,7 @@
                         <div class="loc-name">Mangun Jaya Plafon Pusat</div>
                         <p class="loc-address">Depan Pabrik Konveksi,<br>Jl. Raya Mangun Jaya No.197, RT.004/RW.002<br>Kec. Tambun Selatan, Kab. Bekasi<br>Jawa Barat 17510</p>
                         <div class="loc-actions">
-                            <a href="https://maps.google.com/?q=Jl.+Raya+Mangun+Jaya+No.197+Tambun+Selatan+Bekasi" target="_blank" rel="noopener noreferrer" class="btn btn--primary" style="justify-content:center;">
+                            <a href="https://maps.app.goo.gl/Nhb4qf1c4UjyAedw9" target="_blank" rel="noopener noreferrer" class="btn btn--primary" style="justify-content:center;">
                                 <i data-lucide="navigation" style="width:16px;height:16px;"></i>
                                 Buka di Google Maps
                             </a>
@@ -207,7 +207,7 @@
                     </div>
                     <div class="loc-map">
                         <iframe
-                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.0!2d107.0050!3d-6.2350!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNsKwMTQnMDYuMCJTIDEwN8KwMDAnMTguMCJF!5e0!3m2!1sid!2sid!4v1234567890!5m2!1sid!2sid&q=Jl.+Raya+Mangun+Jaya+No.197,+Tambun+Selatan,+Bekasi"
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.521422841093!2d107.00229997499826!3d-6.219887993771678!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e6988c2e6f1c5c9%3A0x8b7b5c3d2e4f1a2b!2sJl.%20Raya%20Mangun%20Jaya%20No.197%2C%20Mangun%20Jaya%2C%20Kec.%20Tambun%20Sel.%2C%20Kabupaten%20Bekasi%2C%20Jawa%20Barat%2017510!5e0!3m2!1sid!2sid!4v1721332800000!5m2!1sid!2sid"
                             allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
                             title="Peta Mangun Jaya Plafon Pusat - Tambun Selatan Bekasi">
                         </iframe>
@@ -223,7 +223,7 @@
                         <div class="loc-name">Cabang Setu – Cikarang Barat</div>
                         <p class="loc-address">Jl. Raya Setu No.33<br>Mekarwangi, Kec. Cikarang Barat<br>Kabupaten Bekasi 17530</p>
                         <div class="loc-actions">
-                            <a href="https://maps.google.com/?q=Jl.+Raya+Setu+No.33+Mekarwangi+Cikarang+Barat+Bekasi" target="_blank" rel="noopener noreferrer" class="btn btn--primary" style="justify-content:center;">
+                            <a href="https://maps.app.goo.gl/2F9LYTJMNnWBE3tu5" target="_blank" rel="noopener noreferrer" class="btn btn--primary" style="justify-content:center;">
                                 <i data-lucide="navigation" style="width:16px;height:16px;"></i>
                                 Buka di Google Maps
                             </a>
@@ -235,7 +235,7 @@
                     </div>
                     <div class="loc-map">
                         <iframe
-                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.0!2d107.1500!3d-6.3100!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNsKwMTgnMzYuMCJTIDEwN8KwMDknMDAuMCJF!5e0!3m2!1sid!2sid!4v1234567891!5m2!1sid!2sid&q=Jl.+Raya+Setu+No.33,+Mekarwangi,+Cikarang+Barat,+Bekasi"
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.0!2d107.1372!3d-6.2950!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e698f!2sJl.%20Raya%20Setu%20No.33%2C%20Mekarwangi%2C%20Kec.%20Cikarang%20Bar.%2C%20Kabupaten%20Bekasi%2C%20Jawa%20Barat%2017530!5e0!3m2!1sid!2sid!4v1721332801000!5m2!1sid!2sid"
                             allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
                             title="Peta Mangun Jaya Cabang Setu - Cikarang Barat">
                         </iframe>
@@ -248,10 +248,10 @@
                 <div class="loc-card">
                     <div>
                         <span class="loc-badge loc-badge--cabang">Cabang 2</span>
-                        <div class="loc-name">Cabang Rawas Kalong – Tambun Utara</div>
-                        <p class="loc-address">Q29V+F6V,<br>Jl. Raya Rw. Kalong No.131<br>Karangsatria, Kec. Tambun Utara<br>Kabupaten Bekasi, Jawa Barat 17510</p>
+                        <div class="loc-name">Cabang Rw. Kalong – Tambun Utara</div>
+                        <p class="loc-address">Jl. Raya Rw. Kalong No.131<br>Karangsatria, Kec. Tambun Utara<br>Kabupaten Bekasi, Jawa Barat 17510</p>
                         <div class="loc-actions">
-                            <a href="https://maps.google.com/?q=Q29V%2BF6V+Jl.+Raya+Rw.+Kalong+No.131+Karangsatria+Tambun+Utara+Bekasi" target="_blank" rel="noopener noreferrer" class="btn btn--primary" style="justify-content:center;">
+                            <a href="https://maps.app.goo.gl/VJrd2So5zJmJvnjP8" target="_blank" rel="noopener noreferrer" class="btn btn--primary" style="justify-content:center;">
                                 <i data-lucide="navigation" style="width:16px;height:16px;"></i>
                                 Buka di Google Maps
                             </a>
@@ -263,7 +263,7 @@
                     </div>
                     <div class="loc-map">
                         <iframe
-                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3965.0!2d107.0200!3d-6.2100!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNsKwMTInMzYuMCJTIDEwN8KwMDEnMTIuMCJF!5e0!3m2!1sid!2sid!4v1234567892!5m2!1sid!2sid&q=Jl.+Raya+Rw.+Kalong+No.131,+Karangsatria,+Tambun+Utara,+Bekasi"
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3965.0!2d107.0132!3d-6.1980!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e698f!2sJl.%20Raya%20Rw.%20Kalong%20No.131%2C%20Karangsatria%2C%20Kec.%20Tambun%20Utara%2C%20Kabupaten%20Bekasi%2C%20Jawa%20Barat%2017510!5e0!3m2!1sid!2sid!4v1721332802000!5m2!1sid!2sid"
                             allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
                             title="Peta Mangun Jaya Cabang Rw. Kalong 131 - Tambun Utara">
                         </iframe>
@@ -279,7 +279,7 @@
                         <div class="loc-name">Cabang Rw. Kalong – Depan O!Save</div>
                         <p class="loc-address">Jl. Raya Rw. Kalong Depan O!Save No.125<br>Karangsatria, Kec. Tambun Utara<br>Kabupaten Bekasi, Jawa Barat 17510</p>
                         <div class="loc-actions">
-                            <a href="https://maps.google.com/?q=Jl.+Raya+Rw.+Kalong+No.125+Karangsatria+Tambun+Utara+Bekasi" target="_blank" rel="noopener noreferrer" class="btn btn--primary" style="justify-content:center;">
+                            <a href="https://maps.app.goo.gl/fwH4JwovmWQZZkyr6" target="_blank" rel="noopener noreferrer" class="btn btn--primary" style="justify-content:center;">
                                 <i data-lucide="navigation" style="width:16px;height:16px;"></i>
                                 Buka di Google Maps
                             </a>
@@ -291,7 +291,7 @@
                     </div>
                     <div class="loc-map">
                         <iframe
-                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3965.0!2d107.0190!3d-6.2095!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNsKwMTInMzQuMiJTIDEwN8KwMDEnMDguOCJF!5e0!3m2!1sid!2sid!4v1234567893!5m2!1sid!2sid&q=Jl.+Raya+Rw.+Kalong+No.125,+Karangsatria,+Tambun+Utara,+Bekasi"
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3965.0!2d107.0125!3d-6.1975!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e698f!2sJl.%20Raya%20Rw.%20Kalong%20No.125%2C%20Karangsatria%2C%20Kec.%20Tambun%20Utara%2C%20Kabupaten%20Bekasi%2C%20Jawa%20Barat%2017510!5e0!3m2!1sid!2sid!4v1721332803000!5m2!1sid!2sid"
                             allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
                             title="Peta Mangun Jaya Cabang Rw. Kalong 125 - Tambun Utara">
                         </iframe>
@@ -307,7 +307,7 @@
                         <div class="loc-name">Cabang Bekasi Timur – Aren Jaya</div>
                         <p class="loc-address">Samping Bengkel Resmi Suzuki,<br>Jl. Setia Mekar No.130, RT.010/RW.008<br>Aren Jaya, Kec. Bekasi Timur<br>Kota Bekasi, Jawa Barat 17111</p>
                         <div class="loc-actions">
-                            <a href="https://maps.google.com/?q=Jl.+Setia+Mekar+No.130+Aren+Jaya+Bekasi+Timur+Kota+Bekasi" target="_blank" rel="noopener noreferrer" class="btn btn--primary" style="justify-content:center;">
+                            <a href="https://maps.app.goo.gl/yA1G8uQhj9qNB4MbA" target="_blank" rel="noopener noreferrer" class="btn btn--primary" style="justify-content:center;">
                                 <i data-lucide="navigation" style="width:16px;height:16px;"></i>
                                 Buka di Google Maps
                             </a>
@@ -319,7 +319,7 @@
                     </div>
                     <div class="loc-map">
                         <iframe
-                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.0!2d107.0200!3d-6.2500!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNsKwMTUnMDAuMCJTIDEwN8KwMDEnMTIuMCJF!5e0!3m2!1sid!2sid!4v1234567894!5m2!1sid!2sid&q=Jl.+Setia+Mekar+No.130,+Aren+Jaya,+Bekasi+Timur,+Kota+Bekasi"
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.0!2d107.0215!3d-6.2380!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e698f!2sJl.%20Setia%20Mekar%20No.130%2C%20Aren%20Jaya%2C%20Kec.%20Bekasi%20Tim.%2C%20Kota%20Bks%2C%20Jawa%20Barat%2017111!5e0!3m2!1sid!2sid!4v1721332804000!5m2!1sid!2sid"
                             allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
                             title="Peta Mangun Jaya Cabang Bekasi Timur - Aren Jaya">
                         </iframe>
