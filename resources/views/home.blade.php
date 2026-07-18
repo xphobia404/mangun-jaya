@@ -9,8 +9,23 @@
     body { padding-top: 68px; }
 
     /* HERO */
-    .hero { min-height: calc(100vh - 68px); display: grid; grid-template-columns: 1fr 1fr; align-items: center; gap: var(--space-12); padding-block: var(--space-20); position: relative; overflow: hidden; }
-    .hero::before { content: ''; position: absolute; inset: 0; background: radial-gradient(ellipse 60% 70% at 70% 50%, oklch(from var(--color-primary) l c h / 0.07) 0%, transparent 70%); pointer-events: none; }
+    .hero {
+        min-height: calc(100vh - 68px);
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        align-items: center;
+        gap: var(--space-12);
+        padding-block: var(--space-16);
+        position: relative;
+        overflow: hidden;
+    }
+    .hero::before {
+        content: '';
+        position: absolute;
+        inset: 0;
+        background: radial-gradient(ellipse 60% 70% at 70% 50%, oklch(from var(--color-primary) l c h / 0.07) 0%, transparent 70%);
+        pointer-events: none;
+    }
     .hero__content { position: relative; }
     .hero__eyebrow { display: inline-flex; align-items: center; gap: var(--space-2); font-size: var(--text-xs); font-weight: 600; text-transform: uppercase; letter-spacing: 0.1em; color: var(--color-primary); margin-bottom: var(--space-5); }
     .hero__eyebrow::before { content: ''; width: 24px; height: 2px; background: var(--color-primary); border-radius: 2px; }
@@ -60,14 +75,54 @@
     .hero__stats { display: flex; gap: var(--space-8); margin-top: var(--space-10); padding-top: var(--space-8); border-top: 1px solid var(--color-divider); }
     .hero__stat-num { font-family: var(--font-display); font-size: var(--text-xl); font-weight: 800; color: var(--color-text); line-height: 1; }
     .hero__stat-label { font-size: var(--text-xs); color: var(--color-text-muted); margin-top: var(--space-1); }
-    .hero__visual { position: relative; }
-    .hero__image-wrap { border-radius: var(--radius-xl); overflow: hidden; aspect-ratio: 4/5; background: var(--color-surface-offset); box-shadow: var(--shadow-lg); position: relative; }
-    .hero__image-wrap img { width: 100%; height: 100%; object-fit: cover; }
-    .hero__badge-float { position: absolute; bottom: var(--space-6); left: calc(-1 * var(--space-8)); background: var(--color-surface-2); border: 1px solid var(--color-border); border-radius: var(--radius-lg); padding: var(--space-3) var(--space-4); box-shadow: var(--shadow-lg); display: flex; align-items: center; gap: var(--space-3); }
+
+    /* Hero visual — dikecilkan agar sejajar konten kiri */
+    .hero__visual {
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .hero__image-wrap {
+        border-radius: var(--radius-xl);
+        overflow: hidden;
+        /* Ubah dari 4/5 ke 3/4 agar foto lebih pendek & sejajar teks */
+        aspect-ratio: 3/4;
+        /* Batasi max-height agar tidak melebihi tinggi konten kiri */
+        max-height: 560px;
+        width: 100%;
+        background: var(--color-surface-offset);
+        box-shadow: var(--shadow-lg);
+        position: relative;
+    }
+    .hero__image-wrap img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center top;
+    }
+    .hero__badge-float {
+        position: absolute;
+        bottom: var(--space-5);
+        left: calc(-1 * var(--space-6));
+        background: var(--color-surface-2);
+        border: 1px solid var(--color-border);
+        border-radius: var(--radius-lg);
+        padding: var(--space-3) var(--space-4);
+        box-shadow: var(--shadow-lg);
+        display: flex;
+        align-items: center;
+        gap: var(--space-3);
+    }
     .hero__badge-icon { width: 36px; height: 36px; background: var(--color-primary-light); border-radius: var(--radius-md); display: flex; align-items: center; justify-content: center; color: var(--color-primary); flex-shrink: 0; }
     .hero__badge-text strong { display: block; font-size: var(--text-sm); font-weight: 700; color: var(--color-text); }
     .hero__badge-text span { font-size: var(--text-xs); color: var(--color-text-muted); }
-    @media (max-width: 768px) { .hero { grid-template-columns: 1fr; min-height: auto; padding-block: var(--space-12) var(--space-8); } .hero__visual { display: none; } .hero__stats { gap: var(--space-6); } }
+
+    @media (max-width: 768px) {
+        .hero { grid-template-columns: 1fr; min-height: auto; padding-block: var(--space-12) var(--space-8); }
+        .hero__visual { display: none; }
+        .hero__stats { gap: var(--space-6); }
+    }
 
     /* MARQUEE */
     .marquee-wrap { background: var(--color-primary); color: #fff; padding-block: var(--space-3); overflow: hidden; }
@@ -152,7 +207,7 @@
         </div>
         <div class="hero__visual reveal" style="padding-right:clamp(var(--space-4),4vw,var(--space-12));">
             <div class="hero__image-wrap">
-                <img class="home image" src="image/hero-bg.png" alt="">
+                <img src="image/hero-bg.png" alt="Plafon PVC Mangun Jaya" width="560" height="746" loading="eager">
             </div>
             <div class="hero__badge-float">
                 <div class="hero__badge-icon"><i data-lucide="shield-check" style="width:20px;height:20px;"></i></div>
