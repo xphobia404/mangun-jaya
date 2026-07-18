@@ -1,6 +1,6 @@
 @extends('layouts.app')
 @section('title', 'Tentang Kami')
-@section('meta_desc', 'Kenali lebih dekat Mangun Jaya - perusahaan plafon dan interior terpercaya dengan pengalaman lebih dari 10 tahun.')
+@section('meta_desc', 'Mangun Jaya Plafon - Distributor plafon PVC terpercaya sejak 2020. Menyediakan Plafon PVC, Wall Panel, Hollow Galvanis, dan Aksesoris Lengkap.')
 
 @section('content')
 @push('styles')
@@ -24,6 +24,25 @@
     .value-card__icon { width: 40px; height: 40px; border-radius: var(--radius-md); background: var(--color-primary-light); display: flex; align-items: center; justify-content: center; color: var(--color-primary); margin-bottom: var(--space-3); }
     .value-card__title { font-weight: 700; margin-bottom: var(--space-2); }
     .value-card__desc { font-size: var(--text-sm); color: var(--color-text-muted); line-height: 1.65; }
+
+    /* STORY SECTION */
+    .story-brand { font-family: var(--font-display); font-size: var(--text-xl); font-weight: 900; letter-spacing: 0.04em; color: var(--color-primary); text-transform: uppercase; margin-bottom: var(--space-3); }
+    .story-tagline { font-size: var(--text-base); font-weight: 600; color: var(--color-text); margin-bottom: var(--space-6); line-height: 1.6; }
+    .story-body p { color: var(--color-text-muted); line-height: 1.85; margin-bottom: var(--space-4); font-size: var(--text-base); }
+    .story-body p:last-child { margin-bottom: 0; }
+    .story-salam { margin-top: var(--space-6); padding-top: var(--space-6); border-top: 1px solid var(--color-divider); }
+    .story-salam p { color: var(--color-text-muted); font-size: var(--text-sm); line-height: 1.8; margin-bottom: 0; }
+    .story-salam strong { color: var(--color-text); display: block; margin-top: var(--space-1); }
+    .story-komitmen { margin-top: var(--space-5); padding: var(--space-5); background: var(--color-primary-light, oklch(from var(--color-primary) 0.95 0.02 192)); border-left: 3px solid var(--color-primary); border-radius: var(--radius-md); }
+    .story-komitmen p { font-size: var(--text-sm); color: var(--color-text-muted); line-height: 1.75; margin: 0; font-style: italic; }
+
+    /* CEO CARD */
+    .ceo-card { display: flex; align-items: center; gap: var(--space-4); margin-top: var(--space-6); padding: var(--space-4); background: var(--color-surface-2); border: 1px solid oklch(from var(--color-text) l c h / 0.07); border-radius: var(--radius-lg); }
+    .ceo-card__avatar { width: 56px; height: 56px; border-radius: var(--radius-full); overflow: hidden; flex-shrink: 0; background: var(--color-surface-offset); }
+    .ceo-card__avatar img { width: 100%; height: 100%; object-fit: cover; }
+    .ceo-card__name { font-weight: 700; font-size: var(--text-base); color: var(--color-text); }
+    .ceo-card__role { font-size: var(--text-sm); color: var(--color-primary); font-weight: 500; }
+
     @media (max-width: 480px) { .values-grid { grid-template-columns: 1fr; } }
 </style>
 @endpush
@@ -32,25 +51,54 @@
     <div class="container">
         <div class="page-hero__eyebrow">Tentang Kami</div>
         <h1 class="page-hero__title">Dedikasi Kami untuk<br>Hunian Terbaik Anda</h1>
-        <p class="page-hero__desc">Lebih dari satu dekade, kami telah menjadi mitra terpercaya dalam solusi plafon dan interior berkualitas.</p>
+        <p class="page-hero__desc">Distributor plafon PVC terpercaya sejak 2020 &mdash; melayani rumah, ruko, perkantoran hingga proyek skala besar.</p>
     </div>
 </div>
 
 <!-- STORY -->
 <section class="section">
     <div class="container">
-        <div class="grid-2" style="align-items:center;gap:var(--space-16);">
+        <div class="grid-2" style="align-items:start;gap:var(--space-16);">
             <div class="reveal">
                 <div class="section-header">
                     <div class="section-header__eyebrow">Kisah Kami</div>
-                    <h2 class="section-header__title">Dari Bengkel Kecil<br>Menjadi Kepercayaan Ribuan Keluarga</h2>
+                    <h2 class="section-header__title">Mangun Jaya<br>Plafon</h2>
                 </div>
-                <p style="color:var(--color-text-muted);line-height:1.8;margin-bottom:var(--space-4);">Mangun Jaya dimulai pada tahun 2014 dari sebuah bengkel kecil di Bekasi. Berangkat dari semangat untuk memberikan solusi interior yang terjangkau namun berkualitas, kami tumbuh menjadi salah satu penyedia plafon terpercaya di Jawa Barat.</p>
-                <p style="color:var(--color-text-muted);line-height:1.8;margin-bottom:var(--space-6);">Dengan lebih dari 500 proyek yang telah selesai dan ratusan pelanggan setia, kami terus berinovasi menghadirkan produk dan layanan terbaik untuk setiap kebutuhan Anda.</p>
-                <a href="{{ route('contact') }}" class="btn btn--primary">Hubungi Kami <i data-lucide="arrow-right" style="width:16px;height:16px;"></i></a>
+
+                <p class="story-tagline">Kami berkomitmen untuk menyediakan produk-produk bagi pelanggan kami dengan kualitas terbaik</p>
+                <p style="color:var(--color-text-muted);font-size:var(--text-base);margin-bottom:var(--space-5);">Selamat datang di Mangun Jaya Plafon.</p>
+
+                <div class="story-body">
+                    <p>Sejak berdiri pada <strong style="color:var(--color-text);">30 Juli 2020</strong>, Mangun Jaya Plafon berkomitmen menjadi penyedia material plafon dan interior bangunan yang berkualitas, terpercaya, dan mampu memenuhi kebutuhan masyarakat. Kami percaya bahwa setiap bangunan membutuhkan material yang tidak hanya indah secara visual, tetapi juga kuat, tahan lama, dan memberikan kenyamanan.</p>
+                    <p>Dengan mengutamakan kualitas produk, pelayanan terbaik, dan kepuasan pelanggan, kami siap menjadi mitra terpercaya untuk mewujudkan hunian maupun bangunan impian Anda.</p>
+                    <p>Terima kasih atas kepercayaan yang diberikan kepada Mangun Jaya Plafon.</p>
+                </div>
+
+                <div class="story-salam">
+                    <p>Salam Hormat,<strong>Mangun Jaya Plafon</strong></p>
+                </div>
+
+                <div class="story-komitmen">
+                    <p>Kami berkomitmen membangun kemitraan yang terpercaya dengan mengutamakan kebutuhan pelanggan serta memberikan produk dan layanan terbaik di setiap proses.</p>
+                </div>
+
+                <div class="ceo-card">
+                    <div class="ceo-card__avatar">
+                        <img src="{{ asset('image/ceo.jpg') }}" alt="Andre Saputra, S.T. - CEO & Co-founder Mangun Jaya Plafon" width="56" height="56" loading="lazy" onerror="this.style.display='none';this.parentElement.innerHTML='<svg viewBox=\'0 0 56 56\' fill=\'none\' xmlns=\'http://www.w3.org/2000/svg\'><rect width=\'56\' height=\'56\' fill=\'var(--color-surface-offset)\'/><circle cx=\'28\' cy=\'22\' r=\'10\' fill=\'var(--color-text-faint)\'/><ellipse cx=\'28\' cy=\'44\' rx=\'16\' ry=\'10\' fill=\'var(--color-text-faint)\'/></svg>';">
+                    </div>
+                    <div>
+                        <div class="ceo-card__name">Andre Saputra, S.T.</div>
+                        <div class="ceo-card__role">CEO &amp; Co-founder</div>
+                    </div>
+                </div>
+
+                <div style="margin-top:var(--space-6);">
+                    <a href="{{ route('contact') }}" class="btn btn--primary">Hubungi Kami <i data-lucide="arrow-right" style="width:16px;height:16px;"></i></a>
+                </div>
             </div>
+
             <div class="reveal" style="border-radius:var(--radius-xl);overflow:hidden;aspect-ratio:1;background:var(--color-surface-offset);">
-                <img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=700&q=80" alt="Workshop Mangun Jaya" width="700" height="700" loading="lazy" style="width:100%;height:100%;object-fit:cover;">
+                <img src="{{ asset('image/store.png') }}" alt="Toko Mangun Jaya Plafon" width="700" height="700" loading="lazy" style="width:100%;height:100%;object-fit:cover;" onerror="this.src='https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=700&q=80'">
             </div>
         </div>
     </div>
@@ -67,11 +115,11 @@
                 </div>
                 <div class="milestone-line">
                     @foreach([
-                        ['2014', 'Pendirian', 'Mangun Jaya resmi berdiri di Bekasi dengan fokus pemasangan plafon gypsum.'],
-                        ['2016', 'Ekspansi Produk', 'Mulai menyediakan plafon PVC dan GRC untuk memenuhi permintaan yang beragam.'],
-                        ['2018', 'Tim Profesional', 'Membentuk tim instalasi bersertifikat dengan standar keamanan kerja tinggi.'],
-                        ['2020', '300 Proyek', 'Menyelesaikan proyek ke-300 dan membuka toko material plafon.'],
-                        ['2024', '500+ Proyek', 'Melampaui 500 proyek dengan ekspansi layanan ke seluruh Jabodetabek.'],
+                        ['2020', 'Pendirian', 'Mangun Jaya Plafon resmi berdiri pada 30 Juli 2020, berkomitmen menjadi penyedia material plafon berkualitas.'],
+                        ['2021', 'Ekspansi Produk', 'Mulai menyediakan Wall Panel PVC, Hollow Galvanis, dan aksesoris lengkap.'],
+                        ['2022', 'Kepercayaan Pelanggan', 'Ratusan pelanggan setia dari Bekasi dan sekitar Jabodetabek.'],
+                        ['2023', 'Tim Profesional', 'Memperkuat tim dengan tenaga ahli berpengalaman di bidang distribusi material bangunan.'],
+                        ['2024', 'Proyek Skala Besar', 'Melayani perkantoran, ruko, dan proyek konstruksi skala besar.'],
                     ] as $m)
                     <div class="milestone reveal">
                         <div class="milestone__dot"></div>
@@ -89,10 +137,10 @@
                 </div>
                 <div class="values-grid">
                     @foreach([
-                        ['award', 'Kualitas', 'Material terbaik dan pengerjaan presisi di setiap proyek.'],
+                        ['award', 'Kualitas', 'Material terbaik dan produk berkualitas di setiap transaksi.'],
                         ['heart-handshake', 'Integritas', 'Jujur dalam penawaran harga dan transparan dalam proses.'],
                         ['users', 'Pelanggan', 'Kepuasan pelanggan adalah ukuran keberhasilan kami.'],
-                        ['leaf', 'Inovasi', 'Terus belajar dan mengadopsi teknik terbaru di industri.'],
+                        ['leaf', 'Komitmen', 'Berkomitmen memberikan pelayanan dan produk terbaik di setiap proses.'],
                     ] as $v)
                     <div class="value-card reveal">
                         <div class="value-card__icon"><i data-lucide="{{ $v[0] }}" style="width:20px;height:20px;"></i></div>
@@ -115,13 +163,17 @@
         </div>
         <div class="grid-3">
             @foreach([
-                ['Bapak Sugeng', 'Pendiri & Direktur', 'https://i.pravatar.cc/400?img=11'],
-                ['Pak Hendra', 'Kepala Instalasi', 'https://i.pravatar.cc/400?img=12'],
-                ['Bu Rina', 'Manajer Operasional', 'https://i.pravatar.cc/400?img=48'],
+                ['Andre Saputra, S.T.', 'CEO & Co-founder', 'image/ceo.jpg', true],
+                ['Pak Hendra', 'Kepala Operasional', 'https://i.pravatar.cc/400?img=12', false],
+                ['Bu Rina', 'Manajer Penjualan', 'https://i.pravatar.cc/400?img=48', false],
             ] as $member)
             <div class="team-card reveal">
                 <div class="team-card__img">
-                    <img src="{{ $member[2] }}" alt="{{ $member[0] }}" width="400" height="400" loading="lazy">
+                    @if($member[3])
+                        <img src="{{ asset($member[2]) }}" alt="{{ $member[0] }}" width="400" height="400" loading="lazy" onerror="this.src='https://i.pravatar.cc/400?img=11'">
+                    @else
+                        <img src="{{ $member[2] }}" alt="{{ $member[0] }}" width="400" height="400" loading="lazy">
+                    @endif
                 </div>
                 <div class="team-card__body">
                     <div class="team-card__name">{{ $member[0] }}</div>
