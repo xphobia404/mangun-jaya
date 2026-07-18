@@ -187,7 +187,7 @@
                 </button>
             </div>
 
-            <!-- Pusat -->
+            <!-- PUSAT -->
             <div id="panel-pusat" class="loc-panel active" role="tabpanel">
                 <div class="loc-card">
                     <div>
@@ -207,15 +207,15 @@
                     </div>
                     <div class="loc-map">
                         <iframe
-                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.521422841093!2d107.00229997499826!3d-6.219887993771678!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e6988c2e6f1c5c9%3A0x8b7b5c3d2e4f1a2b!2sJl.%20Raya%20Mangun%20Jaya%20No.197%2C%20Mangun%20Jaya%2C%20Kec.%20Tambun%20Sel.%2C%20Kabupaten%20Bekasi%2C%20Jawa%20Barat%2017510!5e0!3m2!1sid!2sid!4v1721332800000!5m2!1sid!2sid"
-                            allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
-                            title="Peta Mangun Jaya Plafon Pusat - Tambun Selatan Bekasi">
+                            src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d991.5255730328988!2d107.0587936!3d-6.2502503!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e698f0011810cb9%3A0xdaad0190d0bd727a!2sMangun%20jaya%20plafon!5e0!3m2!1sid!2sid!4v1784404381791!5m2!1sid!2sid"
+                            allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"
+                            title="Peta Mangun Jaya Plafon Pusat - Tambun Selatan Bekasi" style="border:0;">
                         </iframe>
                     </div>
                 </div>
             </div>
 
-            <!-- Cabang 1 -->
+            <!-- CABANG 1 -->
             <div id="panel-cab1" class="loc-panel" role="tabpanel">
                 <div class="loc-card">
                     <div>
@@ -235,21 +235,21 @@
                     </div>
                     <div class="loc-map">
                         <iframe
-                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.0!2d107.1372!3d-6.2950!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e698f!2sJl.%20Raya%20Setu%20No.33%2C%20Mekarwangi%2C%20Kec.%20Cikarang%20Bar.%2C%20Kabupaten%20Bekasi%2C%20Jawa%20Barat%2017530!5e0!3m2!1sid!2sid!4v1721332801000!5m2!1sid!2sid"
-                            allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
-                            title="Peta Mangun Jaya Cabang Setu - Cikarang Barat">
+                            src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d991.4118588743053!2d107.0631226!3d-6.3099634!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e6991003c150ca5%3A0x6f0542fb0b92ca2c!2sMangun%20Jaya%20Plafon%20Cab%202!5e0!3m2!1sid!2sid!4v1784404413731!5m2!1sid!2sid"
+                            allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"
+                            title="Peta Mangun Jaya Cabang Setu - Cikarang Barat" style="border:0;">
                         </iframe>
                     </div>
                 </div>
             </div>
 
-            <!-- Cabang 2 -->
+            <!-- CABANG 2 -->
             <div id="panel-cab2" class="loc-panel" role="tabpanel">
                 <div class="loc-card">
                     <div>
                         <span class="loc-badge loc-badge--cabang">Cabang 2</span>
                         <div class="loc-name">Cabang Rw. Kalong – Tambun Utara</div>
-                        <p class="loc-address">Jl. Raya Rw. Kalong No.131<br>Karangsatria, Kec. Tambun Utara<br>Kabupaten Bekasi, Jawa Barat 17510</p>
+                        <p class="loc-address">Q29V+F6V,<br>Jl. Raya Rw. Kalong No.131<br>Karangsatria, Kec. Tambun Utara<br>Kabupaten Bekasi, Jawa Barat 17510</p>
                         <div class="loc-actions">
                             <a href="https://maps.app.goo.gl/VJrd2So5zJmJvnjP8" target="_blank" rel="noopener noreferrer" class="btn btn--primary" style="justify-content:center;">
                                 <i data-lucide="navigation" style="width:16px;height:16px;"></i>
@@ -263,15 +263,15 @@
                     </div>
                     <div class="loc-map">
                         <iframe
-                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3965.0!2d107.0132!3d-6.1980!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e698f!2sJl.%20Raya%20Rw.%20Kalong%20No.131%2C%20Karangsatria%2C%20Kec.%20Tambun%20Utara%2C%20Kabupaten%20Bekasi%2C%20Jawa%20Barat%2017510!5e0!3m2!1sid!2sid!4v1721332802000!5m2!1sid!2sid"
-                            allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
-                            title="Peta Mangun Jaya Cabang Rw. Kalong 131 - Tambun Utara">
+                            src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d991.5704400621339!2d107.0434382!3d-6.226533!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e698f0022ec11d7%3A0x1499bcceb58950d9!2sMangun%20Jaya%20Plafon%203!5e0!3m2!1sid!2sid!4v1784404431782!5m2!1sid!2sid"
+                            allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"
+                            title="Peta Mangun Jaya Cabang Rw. Kalong 131 - Tambun Utara" style="border:0;">
                         </iframe>
                     </div>
                 </div>
             </div>
 
-            <!-- Cabang 3 -->
+            <!-- CABANG 3 -->
             <div id="panel-cab3" class="loc-panel" role="tabpanel">
                 <div class="loc-card">
                     <div>
@@ -291,15 +291,15 @@
                     </div>
                     <div class="loc-map">
                         <iframe
-                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3965.0!2d107.0125!3d-6.1975!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e698f!2sJl.%20Raya%20Rw.%20Kalong%20No.125%2C%20Karangsatria%2C%20Kec.%20Tambun%20Utara%2C%20Kabupaten%20Bekasi%2C%20Jawa%20Barat%2017510!5e0!3m2!1sid!2sid!4v1721332803000!5m2!1sid!2sid"
-                            allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
-                            title="Peta Mangun Jaya Cabang Rw. Kalong 125 - Tambun Utara">
+                            src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d991.5613437434931!2d107.0418638!3d-6.2313487!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e698fb0ee75214b%3A0xf340b7d25c51cb9d!2sMangun%20Jaya%20Plafon%20Cab%203!5e0!3m2!1sid!2sid!4v1784404442940!5m2!1sid!2sid"
+                            allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"
+                            title="Peta Mangun Jaya Cabang Rw. Kalong 125 - Tambun Utara" style="border:0;">
                         </iframe>
                     </div>
                 </div>
             </div>
 
-            <!-- Cabang 4 -->
+            <!-- CABANG 4 -->
             <div id="panel-cab4" class="loc-panel" role="tabpanel">
                 <div class="loc-card">
                     <div>
@@ -319,14 +319,15 @@
                     </div>
                     <div class="loc-map">
                         <iframe
-                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.0!2d107.0215!3d-6.2380!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e698f!2sJl.%20Setia%20Mekar%20No.130%2C%20Aren%20Jaya%2C%20Kec.%20Bekasi%20Tim.%2C%20Kota%20Bks%2C%20Jawa%20Barat%2017111!5e0!3m2!1sid!2sid!4v1721332804000!5m2!1sid!2sid"
-                            allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
-                            title="Peta Mangun Jaya Cabang Bekasi Timur - Aren Jaya">
+                            src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d991.5391857936029!2d107.0405933!3d-6.2430639!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e698f542c5c22af%3A0x9ac8c3133ea0fff0!2sMangun%20Jaya%20Plafon%20Cab%204!5e0!3m2!1sid!2sid!4v1784404460680!5m2!1sid!2sid"
+                            allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"
+                            title="Peta Mangun Jaya Cabang Bekasi Timur - Aren Jaya" style="border:0;">
                         </iframe>
                     </div>
                 </div>
             </div>
-        </div>
+
+        </div>{{-- end locations-section --}}
 
     </div>
 </section>
