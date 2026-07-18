@@ -76,7 +76,7 @@
     .hero__stat-num { font-family: var(--font-display); font-size: var(--text-xl); font-weight: 800; color: var(--color-text); line-height: 1; }
     .hero__stat-label { font-size: var(--text-xs); color: var(--color-text-muted); margin-top: var(--space-1); }
 
-    /* Hero visual — dikecilkan agar sejajar konten kiri */
+    /* Hero visual */
     .hero__visual {
         position: relative;
         display: flex;
@@ -86,20 +86,24 @@
     .hero__image-wrap {
         border-radius: var(--radius-xl);
         overflow: hidden;
-        /* Ubah dari 4/5 ke 3/4 agar foto lebih pendek & sejajar teks */
-        aspect-ratio: 3/4;
-        /* Batasi max-height agar tidak melebihi tinggi konten kiri */
-        max-height: 560px;
+        /* Ikuti tinggi konten kiri secara natural */
         width: 100%;
+        max-height: 560px;
+        /* Pakai auto height agar foto tidak terpotong */
         background: var(--color-surface-offset);
         box-shadow: var(--shadow-lg);
-        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
     .hero__image-wrap img {
+        /* contain = foto terlihat SEMUA, tidak terpotong */
         width: 100%;
-        height: 100%;
-        object-fit: cover;
-        object-position: center top;
+        height: auto;
+        max-height: 560px;
+        object-fit: contain;
+        object-position: center center;
+        display: block;
     }
     .hero__badge-float {
         position: absolute;
@@ -207,7 +211,7 @@
         </div>
         <div class="hero__visual reveal" style="padding-right:clamp(var(--space-4),4vw,var(--space-12));">
             <div class="hero__image-wrap">
-                <img src="image/hero-bg.png" alt="Plafon PVC Mangun Jaya" width="560" height="746" loading="eager">
+                <img src="image/hero-bg.png" alt="Plafon PVC Mangun Jaya" width="560" height="560" loading="eager">
             </div>
             <div class="hero__badge-float">
                 <div class="hero__badge-icon"><i data-lucide="shield-check" style="width:20px;height:20px;"></i></div>
