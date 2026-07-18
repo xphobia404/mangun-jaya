@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('title', 'Beranda')
-@section('meta_desc', 'Mangun Jaya - Spesialis plafon gypsum, PVC, GRC terpercaya. Pemasangan profesional, material berkualitas, harga terjangkau.')
+@section('meta_desc', 'Mangun Jaya Plafon - Distributor Plafon PVC Terpercaya. Menyediakan Plafon PVC, Wall Panel, Hollow Galvanis, dan Aksesoris Lengkap. Harga Pabrik!')
 
 @section('content')
 @push('styles')
@@ -16,7 +16,46 @@
     .hero__eyebrow::before { content: ''; width: 24px; height: 2px; background: var(--color-primary); border-radius: 2px; }
     .hero__title { font-family: var(--font-display); font-size: var(--text-hero); font-weight: 800; line-height: 1.05; color: var(--color-text); margin-bottom: var(--space-6); }
     .hero__title em { font-style: italic; color: var(--color-primary); }
-    .hero__desc { font-size: var(--text-base); color: var(--color-text-muted); max-width: 52ch; line-height: 1.75; margin-bottom: var(--space-8); }
+    .hero__desc { font-size: var(--text-base); color: var(--color-text-muted); max-width: 52ch; line-height: 1.75; margin-bottom: var(--space-3); }
+    .hero__desc-sub { font-size: var(--text-sm); color: var(--color-text-muted); max-width: 52ch; line-height: 1.7; margin-bottom: var(--space-5); }
+    .hero__harga-pabrik { display: inline-flex; align-items: center; gap: var(--space-2); margin-bottom: var(--space-6); }
+    .harga-pabrik-badge {
+        display: inline-flex;
+        align-items: center;
+        gap: var(--space-2);
+        background: linear-gradient(135deg, #d4000a 0%, #ff2d20 50%, #d4000a 100%);
+        color: #fff;
+        font-family: var(--font-display);
+        font-size: clamp(1.1rem, 2vw, 1.5rem);
+        font-weight: 900;
+        font-style: italic;
+        letter-spacing: 0.03em;
+        padding: 0.55rem 1.2rem 0.55rem 1rem;
+        border-radius: var(--radius-md);
+        box-shadow: 0 4px 18px oklch(0.4 0.22 25 / 0.45), inset 0 1px 0 oklch(1 0 0 / 0.2);
+        text-transform: uppercase;
+        position: relative;
+        overflow: hidden;
+        animation: pulse-badge 2.2s ease-in-out infinite;
+    }
+    .harga-pabrik-badge::before {
+        content: '';
+        position: absolute;
+        top: 0; left: -100%;
+        width: 60%;
+        height: 100%;
+        background: linear-gradient(90deg, transparent, oklch(1 0 0 / 0.18), transparent);
+        animation: shimmer-badge 2.8s ease-in-out infinite;
+    }
+    .harga-pabrik-badge i { flex-shrink: 0; }
+    @keyframes pulse-badge {
+        0%, 100% { box-shadow: 0 4px 18px oklch(0.4 0.22 25 / 0.45), inset 0 1px 0 oklch(1 0 0 / 0.2); }
+        50% { box-shadow: 0 6px 28px oklch(0.4 0.22 25 / 0.65), inset 0 1px 0 oklch(1 0 0 / 0.2); }
+    }
+    @keyframes shimmer-badge {
+        0% { left: -100%; }
+        60%, 100% { left: 150%; }
+    }
     .hero__ctas { display: flex; gap: var(--space-3); flex-wrap: wrap; }
     .hero__stats { display: flex; gap: var(--space-8); margin-top: var(--space-10); padding-top: var(--space-8); border-top: 1px solid var(--color-divider); }
     .hero__stat-num { font-family: var(--font-display); font-size: var(--text-xl); font-weight: 800; color: var(--color-text); line-height: 1; }
@@ -76,9 +115,16 @@
 <section class="hero">
     <div class="container" style="display:contents;">
         <div class="hero__content" style="padding-left:clamp(var(--space-4),4vw,var(--space-12));">
-            <div class="hero__eyebrow reveal">Spesialis Plafon & Interior</div>
+            <div class="hero__eyebrow reveal">Distributor Plafon PVC Terpercaya</div>
             <h1 class="hero__title reveal">Plafon <em>Indah</em>,<br>Rumah Sempurna</h1>
-            <p class="hero__desc reveal">Kami menyediakan solusi plafon terbaik — dari material berkualitas hingga pemasangan profesional. Percayakan hunian Anda kepada Mangun Jaya.</p>
+            <p class="hero__desc reveal">Mangun Jaya Plafon &mdash; Distributor Plafon PVC Terpercaya dan Berkualitas.</p>
+            <p class="hero__desc-sub reveal">Menyediakan Plafon PVC, Wall Panel, Hollow Galvanis, dan Aksesoris Lengkap untuk Rumah, Ruko, Perkantoran hingga Proyek Skala Besar.</p>
+            <div class="hero__harga-pabrik reveal">
+                <div class="harga-pabrik-badge">
+                    <i data-lucide="tag" style="width:20px;height:20px;"></i>
+                    HARGA PABRIK !!!
+                </div>
+            </div>
             <div class="hero__ctas reveal">
                 <a href="{{ route('products') }}" class="btn btn--primary btn--lg">
                     <i data-lucide="package" style="width:18px;height:18px;"></i>
@@ -122,7 +168,7 @@
 <!-- MARQUEE -->
 <div class="marquee-wrap" aria-hidden="true">
     <div class="marquee-track">
-        @foreach(['Plafon Gypsum', 'Plafon PVC', 'Plafon GRC', 'Partisi Gypsum', 'Rangka Metal', 'List Plafon', 'Plafon Akustik', 'Compound Gypsum', 'Plafon Gypsum', 'Plafon PVC', 'Plafon GRC', 'Partisi Gypsum', 'Rangka Metal', 'List Plafon', 'Plafon Akustik', 'Compound Gypsum'] as $item)
+        @foreach(['Plafon PVC', 'Wall Panel', 'Hollow Galvanis', 'Plafon Gypsum', 'Plafon GRC', 'Partisi Gypsum', 'Rangka Metal', 'List Plafon', 'Plafon Akustik', 'Aksesoris Plafon', 'Plafon PVC', 'Wall Panel', 'Hollow Galvanis', 'Plafon Gypsum', 'Plafon GRC', 'Partisi Gypsum', 'Rangka Metal', 'List Plafon', 'Plafon Akustik', 'Aksesoris Plafon'] as $item)
         <div class="marquee-item">
             <i data-lucide="check-circle" style="width:14px;height:14px;"></i>
             {{ $item }}
