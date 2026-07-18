@@ -130,7 +130,7 @@
                     <i data-lucide="package" style="width:18px;height:18px;"></i>
                     Lihat Produk
                 </a>
-                <a href="https://wa.me/6281234567890" target="_blank" rel="noopener noreferrer" class="btn btn--outline btn--lg">
+                <a href="https://wa.me/6282310719177" target="_blank" rel="noopener noreferrer" class="btn btn--outline btn--lg">
                     <i data-lucide="message-circle" style="width:18px;height:18px;"></i>
                     Konsultasi Gratis
                 </a>
@@ -284,7 +284,7 @@
         <h2 class="cta-section__title reveal">Siap Mempercantik<br>Rumah Anda?</h2>
         <p class="cta-section__desc reveal">Konsultasikan kebutuhan plafon Anda dengan tim ahli kami. Gratis survei dan estimasi biaya.</p>
         <div class="cta-section__actions reveal">
-            <a href="https://wa.me/6281234567890" target="_blank" rel="noopener noreferrer" class="btn btn--white btn--lg">
+            <a href="https://wa.me/6282310719177" target="_blank" rel="noopener noreferrer" class="btn btn--white btn--lg">
                 <i data-lucide="message-circle" style="width:18px;height:18px;"></i>
                 Chat WhatsApp
             </a>

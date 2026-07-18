@@ -56,7 +56,7 @@
                 <div class="product-item__body">
                     <h3 class="product-item__name">{{ $product['name'] }}</h3>
                     <p class="product-item__desc">{{ $product['desc'] }}</p>
-                    <a href="https://wa.me/6281234567890?text=Halo%2C%20saya%20ingin%20tanya%20tentang%20{{ urlencode($product['name']) }}" target="_blank" rel="noopener noreferrer" class="product-item__cta">
+                    <a href="https://wa.me/6282310719177?text=Halo%2C%20saya%20ingin%20tanya%20tentang%20{{ urlencode($product['name']) }}" target="_blank" rel="noopener noreferrer" class="product-item__cta">
                         Tanya Harga <i data-lucide="arrow-right" style="width:14px;height:14px;"></i>
                     </a>
                 </div>
@@ -74,7 +74,7 @@
             <h2 class="section-header__title">Tidak Yakin Produk<br>Mana yang Tepat?</h2>
             <p class="section-header__desc">Tim ahli kami siap membantu Anda memilih produk yang paling sesuai dengan kebutuhan dan anggaran.</p>
         </div>
-        <a href="https://wa.me/6281234567890" target="_blank" rel="noopener noreferrer" class="btn btn--primary btn--lg reveal">
+        <a href="https://wa.me/6282310719177" target="_blank" rel="noopener noreferrer" class="btn btn--primary btn--lg reveal">
             <i data-lucide="message-circle" style="width:18px;height:18px;"></i>
             Konsultasi via WhatsApp
         </a>
