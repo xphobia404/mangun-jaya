@@ -5,6 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>@yield('title', 'Mangun Jaya Plafon') - Solusi Plafon & Interior Terbaik</title>
     <meta name="description" content="@yield('meta_desc', 'Mangun Jaya menyediakan plafon gypsum, PVC, GRC berkualitas tinggi dengan pemasangan profesional di seluruh wilayah.')">
+    <link rel="icon" type="image/jpeg" href="{{ asset('image/logo.jpg') }}">
+    <link rel="shortcut icon" href="{{ asset('image/logo.jpg') }}">
+    <link rel="apple-touch-icon" href="{{ asset('image/logo.jpg') }}">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300..800&family=Fraunces:ital,opsz,wght@0,9..144,300..900;1,9..144,300..900&display=swap" rel="stylesheet">
@@ -131,7 +134,7 @@
         .navbar.scrolled { box-shadow: var(--shadow-md); }
         .navbar__inner { display: flex; align-items: center; gap: var(--space-8); height: 68px; }
         .navbar__logo { display: flex; align-items: center; gap: var(--space-3); flex-shrink: 0; }
-        .navbar__logo-icon { width: 40px; height: 40px; }
+        .navbar__logo-img { width: 40px; height: 40px; border-radius: var(--radius-md); object-fit: contain; }
         .navbar__logo-text { display: flex; flex-direction: column; line-height: 1.1; }
         .navbar__logo-name { font-family: var(--font-display); font-size: 1.1rem; font-weight: 700; color: var(--color-primary); }
         .navbar__logo-sub { font-size: var(--text-xs); color: var(--color-text-muted); font-weight: 500; }
@@ -160,7 +163,9 @@
         .footer a { color: oklch(from var(--color-text-inverse) l c h / 0.65); transition: color var(--transition); }
         .footer a:hover { color: var(--color-primary); }
         .footer__grid { display: grid; grid-template-columns: 1.6fr 1fr 1fr 1fr; gap: var(--space-12); margin-bottom: var(--space-12); }
-        .footer__brand-name { font-family: var(--font-display); font-size: var(--text-lg); color: var(--color-primary); margin-bottom: var(--space-3); }
+        .footer__brand { display: flex; align-items: center; gap: var(--space-3); margin-bottom: var(--space-3); }
+        .footer__brand-logo { width: 40px; height: 40px; border-radius: var(--radius-md); object-fit: contain; }
+        .footer__brand-name { font-family: var(--font-display); font-size: var(--text-lg); color: var(--color-primary); }
         .footer__desc { font-size: var(--text-sm); line-height: 1.7; color: oklch(from var(--color-text-inverse) l c h / 0.6); max-width: 30ch; }
         .footer__heading { font-family: var(--font-body); font-size: var(--text-sm); font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: oklch(from var(--color-text-inverse) l c h / 0.45); margin-bottom: var(--space-4); }
         .footer__links { display: flex; flex-direction: column; gap: var(--space-2); }
@@ -213,12 +218,14 @@
         <div class="container">
             <div class="navbar__inner">
                 <a href="{{ route('home') }}" class="navbar__logo">
-                    <svg class="navbar__logo-icon" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="Mangun Jaya Logo">
-                        <rect width="40" height="40" rx="8" fill="var(--color-primary)"/>
-                        <path d="M8 30 L14 14 L20 24 L26 14 L32 30" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
-                        <path d="M6 30 H34" stroke="white" stroke-width="2" stroke-linecap="round"/>
-                        <path d="M20 8 L36 20 H4 L20 8Z" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none" opacity="0.6"/>
-                    </svg>
+                    <img
+                        src="{{ asset('image/logo.jpg') }}"
+                        alt="Mangun Jaya Plafon"
+                        class="navbar__logo-img"
+                        width="40"
+                        height="40"
+                        loading="eager"
+                    >
                     <div class="navbar__logo-text">
                         <span class="navbar__logo-name">Mangun Jaya</span>
                         <span class="navbar__logo-sub">Plafon & Interior</span>
@@ -280,7 +287,17 @@
         <div class="container">
             <div class="footer__grid">
                 <div>
-                    <div class="footer__brand-name">Mangun Jaya</div>
+                    <div class="footer__brand">
+                        <img
+                            src="{{ asset('image/logo.jpg') }}"
+                            alt="Mangun Jaya Plafon"
+                            class="footer__brand-logo"
+                            width="40"
+                            height="40"
+                            loading="lazy"
+                        >
+                        <span class="footer__brand-name">Mangun Jaya</span>
+                    </div>
                     <p class="footer__desc">Spesialis plafon dan interior terpercaya. Kualitas terbaik untuk hunian dan bangunan komersial Anda.</p>
                 </div>
                 <div>
