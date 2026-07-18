@@ -137,11 +137,11 @@
             </div>
             <div class="hero__stats reveal">
                 <div>
-                    <div class="hero__stat-num">500+</div>
-                    <div class="hero__stat-label">Proyek Selesai</div>
+                    <div class="hero__stat-num">103K</div>
+                    <div class="hero__stat-label">Produk Terjual</div>
                 </div>
                 <div>
-                    <div class="hero__stat-num">10+</div>
+                    <div class="hero__stat-num">6+</div>
                     <div class="hero__stat-label">Tahun Pengalaman</div>
                 </div>
                 <div>
