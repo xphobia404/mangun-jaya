@@ -152,7 +152,7 @@
         </div>
         <div class="hero__visual reveal" style="padding-right:clamp(var(--space-4),4vw,var(--space-12));">
             <div class="hero__image-wrap">
-                <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=700&q=80" alt="Interior rumah dengan plafon gypsum modern" width="700" height="875" loading="eager">
+                <img class="home image" src="image/hero-bg.png" alt="">
             </div>
             <div class="hero__badge-float">
                 <div class="hero__badge-icon"><i data-lucide="shield-check" style="width:20px;height:20px;"></i></div>
