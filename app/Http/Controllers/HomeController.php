@@ -9,12 +9,12 @@ class HomeController extends Controller
     public function index()
     {
         $products = [
-            ['name' => 'Plafon Gypsum', 'desc' => 'Material ringan, mudah dibentuk, cocok untuk hunian modern.', 'icon' => 'home'],
-            ['name' => 'Plafon PVC', 'desc' => 'Anti air, anti rayap, cocok untuk kamar mandi dan dapur.', 'icon' => 'droplets'],
-            ['name' => 'Plafon GRC', 'desc' => 'Kuat dan tahan lama, ideal untuk bangunan komersial.', 'icon' => 'building-2'],
-            ['name' => 'Partisi Gypsum', 'desc' => 'Pemisah ruangan fleksibel dengan finishing yang rapi.', 'icon' => 'layout'],
-            ['name' => 'Rangka Metal', 'desc' => 'Rangka baja ringan untuk plafon dan partisi berkualitas tinggi.', 'icon' => 'grid'],
-            ['name' => 'Aksesoris Plafon', 'desc' => 'List profil, lis plafon, dan aksesoris pendukung lainnya.', 'icon' => 'package'],
+            ['name' => 'Plafon PVC', 'desc' => 'Anti air, anti rayap, ringan dan mudah dipasang. Pilihan terbaik untuk hunian, ruko, dan perkantoran.', 'icon' => 'layers'],
+            ['name' => 'Wall Panel PVC', 'desc' => 'Panel dinding PVC estetis dan tahan lama, tersedia berbagai motif untuk interior modern.', 'icon' => 'layout-panel-left'],
+            ['name' => 'Lis PVC', 'desc' => 'List profil PVC untuk finishing sudut plafon dan dinding, tampak rapi dan mewah.', 'icon' => 'minus-square'],
+            ['name' => 'Hollow Galvanis', 'desc' => 'Rangka hollow baja galvanis anti karat, kuat dan presisi untuk konstruksi plafon dan partisi.', 'icon' => 'grid-2x2'],
+            ['name' => 'Rangka Plafon', 'desc' => 'Rangka metal furing berkualitas tinggi untuk struktur plafon yang kokoh dan tahan lama.', 'icon' => 'frame'],
+            ['name' => 'Aksesoris', 'desc' => 'Kelengkapan aksesoris pemasangan plafon, mulai dari klem, bracket, hingga komponen pendukung lainnya.', 'icon' => 'package'],
         ];
 
         $testimonials = [
@@ -34,14 +34,54 @@ class HomeController extends Controller
     public function products()
     {
         $products = [
-            ['name' => 'Plafon Gypsum', 'desc' => 'Material ringan, mudah dibentuk, ideal untuk desain interior modern. Tersedia dalam berbagai ukuran dan ketebalan.', 'tag' => 'Populer'],
-            ['name' => 'Plafon PVC', 'desc' => 'Tahan air dan anti rayap, pilihan terbaik untuk area basah. Mudah dibersihkan dan tahan lama.', 'tag' => 'Terlaris'],
-            ['name' => 'Plafon GRC', 'desc' => 'Kekuatan tinggi dengan bobot yang lebih ringan dibanding beton. Cocok untuk proyek komersial dan industrial.', 'tag' => null],
-            ['name' => 'Plafon Akustik', 'desc' => 'Peredam suara terbaik untuk studio, ruang rapat, dan bioskop. Meningkatkan kenyamanan akustik ruangan.', 'tag' => null],
-            ['name' => 'Partisi Gypsum', 'desc' => 'Pembagi ruangan yang fleksibel dan estetis. Instalasi cepat dengan hasil akhir yang halus dan bersih.', 'tag' => null],
-            ['name' => 'Rangka Metal Furing', 'desc' => 'Rangka baja ringan anti karat untuk struktur plafon dan partisi. Kuat, ringan, dan presisi.', 'tag' => null],
-            ['name' => 'List Plafon', 'desc' => 'Finishing tepi plafon dengan berbagai motif profil. Memberi kesan mewah dan rapi pada sudut ruangan.', 'tag' => null],
-            ['name' => 'Compound & Compound Tools', 'desc' => 'Bahan pengisi dan perata sambungan gypsum. Hasil sambungan yang tidak terlihat dan mulus.', 'tag' => null],
+            [
+                'name' => 'Plafon PVC',
+                'desc' => 'Anti air, anti rayap, ringan dan mudah dipasang. Cocok untuk rumah, ruko, kantor, hingga proyek skala besar. Tersedia berbagai motif dan warna.',
+                'tag' => 'Terlaris',
+                'icon' => 'layers',
+            ],
+            [
+                'name' => 'Wall Panel PVC',
+                'desc' => 'Panel dinding PVC modern dan estetis. Tahan lembab, mudah dibersihkan, dan tersedia dalam berbagai pilihan motif untuk interior yang memukau.',
+                'tag' => 'Populer',
+                'icon' => 'layout-panel-left',
+            ],
+            [
+                'name' => 'Lis PVC',
+                'desc' => 'List profil PVC untuk finishing tepi plafon dan pertemuan dinding. Memberikan kesan rapi, bersih, dan mewah pada setiap sudut ruangan.',
+                'tag' => null,
+                'icon' => 'minus-square',
+            ],
+            [
+                'name' => 'Hollow Galvanis',
+                'desc' => 'Besi hollow baja galvanis anti karat dengan dimensi presisi. Ideal untuk rangka plafon, partisi, dan berbagai kebutuhan konstruksi bangunan.',
+                'tag' => null,
+                'icon' => 'grid-2x2',
+            ],
+            [
+                'name' => 'Rangka Plafon',
+                'desc' => 'Rangka metal furing dan channel berkualitas tinggi. Struktur rangka yang kuat, ringan, dan tahan lama untuk pemasangan plafon yang sempurna.',
+                'tag' => null,
+                'icon' => 'frame',
+            ],
+            [
+                'name' => 'Aksesoris',
+                'desc' => 'Kelengkapan aksesoris pemasangan plafon PVC dan wall panel, termasuk klem, bracket, dan berbagai komponen pendukung instalasi.',
+                'tag' => null,
+                'icon' => 'package',
+            ],
+            [
+                'name' => 'Lem',
+                'desc' => 'Lem khusus untuk pemasangan plafon PVC dan wall panel. Formula kuat dan tahan lama, memastikan material terpasang dengan aman dan rapi.',
+                'tag' => null,
+                'icon' => 'droplets',
+            ],
+            [
+                'name' => 'Sekrup',
+                'desc' => 'Sekrup berkualitas tinggi untuk instalasi rangka dan plafon. Tersedia berbagai ukuran sesuai kebutuhan proyek Anda.',
+                'tag' => null,
+                'icon' => 'settings-2',
+            ],
         ];
         return view('products', compact('products'));
     }
@@ -60,8 +100,8 @@ class HomeController extends Controller
     public function sendContact(Request $request)
     {
         $request->validate([
-            'name' => 'required|string|max:100',
-            'phone' => 'required|string|max:20',
+            'name'    => 'required|string|max:100',
+            'phone'   => 'required|string|max:20',
             'message' => 'required|string|max:1000',
         ]);
 
