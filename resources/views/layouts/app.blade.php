@@ -162,16 +162,7 @@
         .footer { background: var(--color-text); color: var(--color-text-inverse); padding-block: var(--space-16) var(--space-8); }
         .footer a { color: oklch(from var(--color-text-inverse) l c h / 0.65); transition: color var(--transition); }
         .footer a:hover { color: var(--color-primary); }
-
-        /* Footer top: info grid + maps side by side */
-        .footer__top { display: grid; grid-template-columns: 1fr 380px; gap: var(--space-10); margin-bottom: var(--space-10); align-items: start; }
-        .footer__info-grid { display: grid; grid-template-columns: 1.6fr 1fr 1fr 1fr; gap: var(--space-8); }
-
-        /* Maps panel in footer */
-        .footer__maps { border-radius: var(--radius-lg); overflow: hidden; border: 1px solid oklch(from var(--color-text-inverse) l c h / 0.12); box-shadow: 0 4px 20px oklch(0 0 0 / 0.35); flex-shrink: 0; }
-        .footer__maps-label { background: oklch(from var(--color-text-inverse) l c h / 0.06); padding: var(--space-3) var(--space-4); font-size: var(--text-xs); font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: oklch(from var(--color-text-inverse) l c h / 0.45); display: flex; align-items: center; gap: var(--space-2); border-bottom: 1px solid oklch(from var(--color-text-inverse) l c h / 0.08); }
-        .footer__maps iframe { display: block; width: 100%; height: 220px; border: 0; }
-
+        .footer__grid { display: grid; grid-template-columns: 1.6fr 1fr 1fr 1fr; gap: var(--space-12); margin-bottom: var(--space-12); }
         .footer__brand { display: flex; align-items: center; gap: var(--space-3); margin-bottom: var(--space-3); }
         .footer__brand-logo { width: 40px; height: 40px; border-radius: var(--radius-md); object-fit: contain; }
         .footer__brand-name { font-family: var(--font-display); font-size: var(--text-lg); color: var(--color-primary); }
@@ -181,18 +172,8 @@
         .footer__link { font-size: var(--text-sm); }
         .footer__bottom { border-top: 1px solid oklch(from var(--color-text-inverse) l c h / 0.1); padding-top: var(--space-6); display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: var(--space-3); }
         .footer__copy { font-size: var(--text-xs); color: oklch(from var(--color-text-inverse) l c h / 0.4); }
-
-        @media (max-width: 1024px) {
-            .footer__top { grid-template-columns: 1fr; }
-            .footer__maps { max-width: 100%; }
-            .footer__maps iframe { height: 200px; }
-        }
-        @media (max-width: 768px) {
-            .footer__info-grid { grid-template-columns: 1fr 1fr; gap: var(--space-8); }
-        }
-        @media (max-width: 480px) {
-            .footer__info-grid { grid-template-columns: 1fr; }
-        }
+        @media (max-width: 768px) { .footer__grid { grid-template-columns: 1fr 1fr; gap: var(--space-8); } }
+        @media (max-width: 480px) { .footer__grid { grid-template-columns: 1fr; } }
 
         /* ===== THEME TOGGLE ===== */
         .theme-toggle { display: flex; align-items: center; justify-content: center; width: 38px; height: 38px; border-radius: var(--radius-md); color: var(--color-text-muted); transition: color var(--transition), background var(--transition); }
@@ -304,113 +285,59 @@
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
-
-            <!-- Top: Info Grid + Maps -->
-            <div class="footer__top">
-
-                <!-- Info columns -->
-                <div class="footer__info-grid">
-                    <!-- Brand -->
-                    <div>
-                        <div class="footer__brand">
-                            <img
-                                src="{{ asset('image/logo.jpg') }}"
-                                alt="Mangun Jaya Plafon"
-                                class="footer__brand-logo"
-                                width="40"
-                                height="40"
-                                loading="lazy"
-                            >
-                            <span class="footer__brand-name">Mangun Jaya</span>
-                        </div>
-                        <p class="footer__desc">Spesialis plafon dan interior terpercaya. Kualitas terbaik untuk hunian dan bangunan komersial Anda.</p>
+            <div class="footer__grid">
+                <div>
+                    <div class="footer__brand">
+                        <img
+                            src="{{ asset('image/logo.jpg') }}"
+                            alt="Mangun Jaya Plafon"
+                            class="footer__brand-logo"
+                            width="40"
+                            height="40"
+                            loading="lazy"
+                        >
+                        <span class="footer__brand-name">Mangun Jaya</span>
                     </div>
-
-                    <!-- Navigasi -->
-                    <div>
-                        <div class="footer__heading">Navigasi</div>
-                        <nav class="footer__links" aria-label="Footer navigation">
-                            <a href="{{ route('home') }}" class="footer__link">Beranda</a>
-                            <a href="{{ route('about') }}" class="footer__link">Tentang Kami</a>
-                            <a href="{{ route('products') }}" class="footer__link">Produk</a>
-                            <a href="{{ route('gallery') }}" class="footer__link">Galeri</a>
-                            <a href="{{ route('contact') }}" class="footer__link">Kontak</a>
-                        </nav>
-                    </div>
-
-                    <!-- Produk -->
-                    <div>
-                        <div class="footer__heading">Produk</div>
-                        <nav class="footer__links" aria-label="Produk navigation">
-                            <a href="{{ route('products') }}" class="footer__link">Plafon Gypsum</a>
-                            <a href="{{ route('products') }}" class="footer__link">Plafon PVC</a>
-                            <a href="{{ route('products') }}" class="footer__link">Plafon GRC</a>
-                            <a href="{{ route('products') }}" class="footer__link">Partisi Gypsum</a>
-                            <a href="{{ route('products') }}" class="footer__link">Rangka Metal</a>
-                        </nav>
-                    </div>
-
-                    <!-- Kontak -->
-                    <div>
-                        <div class="footer__heading">Kontak</div>
-                        <div class="footer__links" style="gap:var(--space-3);">
-                            <a href="tel:+6282310719177" class="footer__link" style="display:flex;align-items:flex-start;gap:var(--space-2);">
-                                <i data-lucide="phone" style="width:15px;height:15px;flex-shrink:0;margin-top:2px;"></i>
-                                <span>+62 823-1071-9177</span>
-                            </a>
-                            <a href="https://wa.me/6282310719177" target="_blank" rel="noopener noreferrer" class="footer__link" style="display:flex;align-items:flex-start;gap:var(--space-2);">
-                                <i data-lucide="message-circle" style="width:15px;height:15px;flex-shrink:0;margin-top:2px;"></i>
-                                <span>WhatsApp</span>
-                            </a>
-                            <a href="https://maps.app.goo.gl/Nhb4qf1c4UjyAedw9" target="_blank" rel="noopener noreferrer" class="footer__link" style="display:flex;align-items:flex-start;gap:var(--space-2);">
-                                <i data-lucide="map-pin" style="width:15px;height:15px;flex-shrink:0;margin-top:3px;color:var(--color-primary);"></i>
-                                <span>
-                                    <strong style="color:oklch(from var(--color-text-inverse) l c h / 0.9);display:block;margin-bottom:2px;">Pusat</strong>
-                                    Mangun Jaya Plafon<br>
-                                    Bekasi, Jawa Barat
-                                </span>
-                            </a>
-                            <div style="margin-top:var(--space-1);">
-                                <div style="font-size:var(--text-xs);color:oklch(from var(--color-text-inverse) l c h / 0.4);margin-bottom:var(--space-1);">Cabang tersedia di 4 lokasi</div>
-                                <a href="{{ route('contact') }}" class="footer__link" style="font-size:var(--text-xs);color:var(--color-primary);font-weight:600;">
-                                    Lihat semua lokasi →
-                                </a>
-                            </div>
+                    <p class="footer__desc">Spesialis plafon dan interior terpercaya. Kualitas terbaik untuk hunian dan bangunan komersial Anda.</p>
+                </div>
+                <div>
+                    <div class="footer__heading">Navigasi</div>
+                    <nav class="footer__links" aria-label="Footer navigation">
+                        <a href="{{ route('home') }}" class="footer__link">Beranda</a>
+                        <a href="{{ route('about') }}" class="footer__link">Tentang Kami</a>
+                        <a href="{{ route('products') }}" class="footer__link">Produk</a>
+                        <a href="{{ route('gallery') }}" class="footer__link">Galeri</a>
+                        <a href="{{ route('contact') }}" class="footer__link">Kontak</a>
+                    </nav>
+                </div>
+                <div>
+                    <div class="footer__heading">Produk</div>
+                    <nav class="footer__links" aria-label="Produk navigation">
+                        <a href="{{ route('products') }}" class="footer__link">Plafon Gypsum</a>
+                        <a href="{{ route('products') }}" class="footer__link">Plafon PVC</a>
+                        <a href="{{ route('products') }}" class="footer__link">Plafon GRC</a>
+                        <a href="{{ route('products') }}" class="footer__link">Partisi Gypsum</a>
+                        <a href="{{ route('products') }}" class="footer__link">Rangka Metal</a>
+                    </nav>
+                </div>
+                <div>
+                    <div class="footer__heading">Kontak</div>
+                    <div class="footer__links" style="gap:var(--space-3);">
+                        <a href="tel:+6282310719177" class="footer__link" style="display:flex;align-items:flex-start;gap:var(--space-2);">
+                            <i data-lucide="phone" style="width:15px;height:15px;flex-shrink:0;margin-top:2px;"></i>
+                            <span>+62 823-1071-9177</span>
+                        </a>
+                        <a href="https://wa.me/6282310719177" target="_blank" rel="noopener noreferrer" class="footer__link" style="display:flex;align-items:flex-start;gap:var(--space-2);">
+                            <i data-lucide="message-circle" style="width:15px;height:15px;flex-shrink:0;margin-top:2px;"></i>
+                            <span>WhatsApp</span>
+                        </a>
+                        <div style="display:flex;align-items:flex-start;gap:var(--space-2);color:oklch(from var(--color-text-inverse) l c h / 0.5);font-size:var(--text-sm);">
+                            <i data-lucide="map-pin" style="width:15px;height:15px;flex-shrink:0;margin-top:2px;"></i>
+                            <span>Jl. Raya Contoh No. 123<br>Bekasi, Jawa Barat</span>
                         </div>
                     </div>
                 </div>
-
-                <!-- Maps Panel (Pusat) -->
-                <div class="footer__maps">
-                    <div class="footer__maps-label">
-                        <i data-lucide="map-pin" style="width:13px;height:13px;color:var(--color-primary);"></i>
-                        Lokasi Pusat — Mangun Jaya Plafon
-                    </div>
-                    <iframe
-                        src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d991.5255730328988!2d107.0587936!3d-6.2502503!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e698f0011810cb9%3A0xdaad0190d0bd727a!2sMangun%20jaya%20plafon!5e0!3m2!1sid!2sid!4v1784404381791!5m2!1sid!2sid"
-                        width="600"
-                        height="220"
-                        style="border:0;"
-                        allowfullscreen=""
-                        loading="lazy"
-                        referrerpolicy="strict-origin-when-cross-origin"
-                        title="Lokasi Pusat Mangun Jaya Plafon"
-                    ></iframe>
-                    <a
-                        href="https://maps.app.goo.gl/Nhb4qf1c4UjyAedw9"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        style="display:flex;align-items:center;justify-content:center;gap:var(--space-2);padding:var(--space-3) var(--space-4);background:oklch(from var(--color-text-inverse) l c h / 0.06);font-size:var(--text-xs);font-weight:600;color:var(--color-primary);transition:background 180ms;text-decoration:none;border-top:1px solid oklch(from var(--color-text-inverse) l c h / 0.08);"
-                        onmouseover="this.style.background='oklch(from var(--color-text-inverse) l c h / 0.1)'"
-                        onmouseout="this.style.background='oklch(from var(--color-text-inverse) l c h / 0.06)'"
-                    >
-                        <i data-lucide="external-link" style="width:13px;height:13px;"></i>
-                        Buka di Google Maps
-                    </a>
-                </div>
-
-            </div><!-- /.footer__top -->
-
+            </div>
             <div class="footer__bottom">
                 <p class="footer__copy">&copy; {{ date('Y') }} Mangun Jaya Plafon. Semua hak dilindungi.</p>
                 <p class="footer__copy">Dibuat dengan ❤️ menggunakan Laravel</p>
